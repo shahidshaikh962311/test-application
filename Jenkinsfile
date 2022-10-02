@@ -11,7 +11,8 @@ pipeline {
              stage ('git-clone'){
          
                               steps{
-                               
+                                 
+                                 sh "rm -rf *"         
                                  sh "git clone https://github.com/shahidshaikh962311/test-application.git"
                                   
                                    }
