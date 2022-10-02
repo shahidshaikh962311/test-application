@@ -2,7 +2,7 @@ pipeline {
             agent {
                
                 label {
-                          label ('built-in')
+                          label ('172.31.37.70')
                           customWorkspace ('/mnt/multibranch/')
                        }
                  }
@@ -13,7 +13,7 @@ pipeline {
                               steps{
                                  
                                  sh "rm -rf *"         
-                                 sh "git clone https://github.com/shahidshaikh962311/test-application.git"
+                                 sh "git clone https://github.com/shahidshaikh962311/test-application.git -b branch-2"
                                   
                                    }
                              }
@@ -23,7 +23,7 @@ pipeline {
                           steps{
            
                                  sh "cp -r /mnt/multibranch/test-application/index.html /var/www/html/"
-                                 sh "chmod -R 777 /var/www/html"
+                                 
                              }
                     
                       }
