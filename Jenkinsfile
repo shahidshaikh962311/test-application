@@ -22,7 +22,7 @@ pipeline {
         
                           steps{
            
-                                 sh "cp -r /mnt/multibranch/index.html /var/www/html/"
+                                 sh "cp -r /mnt/multibranch/test-application/index.html /var/www/html/"
                                  sh "chmod -R 777 /var/www/html"
                              }
                     
